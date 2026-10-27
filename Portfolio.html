@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Peter Parker - Your Friendly Neighborhood Full-Stack Developer crafting high-performance web applications, resilient architectures, and comic-fast user experiences.">
+  <title>Peter Parker | Your Friendly Neighborhood Developer</title>
+
+  <!-- Google Fonts: Comic display (Bangers, Russo One) & Modern Clean UI (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Web Pattern Overlay -->
+  <div class="web-backdrop" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#about" class="nav-logo" aria-label="Home - Peter Parker">
+        <!-- Stylized Spider Monogram / Emblem -->
+        <svg class="spider-logo-icon" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <!-- Spider body & head -->
+          <ellipse cx="50" cy="42" rx="7" ry="10" />
+          <ellipse cx="50" cy="62" rx="10" ry="16" />
+          <ellipse cx="50" cy="28" rx="5" ry="5" />
+          <!-- Spider Legs (Upper) -->
+          <path d="M47 38 Q32 20 18 24 Q30 35 44 42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M53 38 Q68 20 82 24 Q70 35 56 42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M46 44 Q24 35 14 46 Q28 50 44 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M54 44 Q76 35 86 46 Q72 50 56 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <!-- Spider Legs (Lower) -->
+          <path d="M45 56 Q25 58 12 72 Q28 68 44 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M55 56 Q75 58 88 72 Q72 68 56 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M46 64 Q32 78 22 92 Q34 82 46 68" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M54 64 Q68 78 78 92 Q66 82 54 68" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-name">PETER<span class="accent-red">PARKER</span></span>
+          <span class="logo-badge">DEV</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="navMenu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#connect" class="nav-link nav-cta">Signal Me</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section (#about) -->
+    <section class="hero-section section-padding" id="about">
+      <div class="container hero-grid">
+        
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="spider-badge">
+            <span class="pulse-dot"></span>
+            <span class="badge-text">Spider-Sense: Online & Ready for Missions</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hey, I'm <span class="hero-name glow-red">Peter Parker</span>
+          </h1>
+
+          <div class="comic-subtitle-wrapper">
+            <p class="comic-subtitle">
+              Your Friendly Neighborhood Developer
+            </p>
+          </div>
+
+          <p class="hero-description">
+            Full-stack web engineer weaving resilient digital ecosystems, blazing-fast interfaces, and bulletproof backends. Driven by the tenet that <em>with great computational power comes great architectural responsibility</em>.
+          </p>
+
+          <!-- Quick Stat Badges -->
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-number">4+</span>
+              <span class="meta-label">Years of Craft</span>
+            </div>
+            <div class="meta-separator" aria-hidden="true">•</div>
+            <div class="meta-item">
+              <span class="meta-number">25+</span>
+              <span class="meta-label">Field Missions</span>
+            </div>
+            <div class="meta-separator" aria-hidden="true">•</div>
+            <div class="meta-item">
+              <span class="meta-number">99.9%</span>
+              <span class="meta-label">Uptime Reflexes</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span class="btn-text">View My Web of Work</span>
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="#connect" class="btn btn-secondary">
+              <span class="btn-text">Signal Me</span>
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Spidey Illustration Card -->
+        <div class="hero-visual">
+          <div class="comic-card hero-avatar-card">
+            <div class="comic-card-halo" aria-hidden="true"></div>
+            
+            <!-- Spider Emblem Icon Large -->
+            <div class="spidey-emblem-container">
+              <div class="spidey-mask">
+                <svg viewBox="0 0 160 190" class="mask-svg" aria-label="Spider-Man stylized mask icon">
+                  <!-- Mask outline -->
+                  <path class="mask-base" d="M80 8 C135 8 152 55 148 115 C145 155 110 182 80 188 C50 182 15 155 12 115 C8 55 25 8 80 8 Z" fill="#e23636" stroke="#0b0c10" stroke-width="4"/>
+                  
+                  <!-- Subtle Web Lines inside Mask -->
+                  <g class="mask-web-lines" stroke="rgba(11, 12, 16, 0.4)" stroke-width="1.8" fill="none">
+                    <line x1="80" y1="8" x2="80" y2="188"/>
+                    <line x1="12" y1="95" x2="148" y2="95"/>
+                    <line x1="25" y1="45" x2="135" y2="145"/>
+                    <line x1="25" y1="145" x2="135" y2="45"/>
+                    <ellipse cx="80" cy="95" rx="35" ry="45"/>
+                    <ellipse cx="80" cy="95" rx="55" ry="70"/>
+                  </g>
+
+                  <!-- Left Eye with Comic Outline -->
+                  <path class="mask-eye-border" d="M30 65 Q58 72 74 95 Q54 110 34 100 Q20 90 30 65 Z" fill="#0b0c10"/>
+                  <path class="mask-eye-lens" d="M33 69 Q56 75 70 94 Q52 106 36 97 Q25 89 33 69 Z" fill="#ffffff"/>
+
+                  <!-- Right Eye with Comic Outline -->
+                  <path class="mask-eye-border" d="M130 65 Q102 72 86 95 Q106 110 126 100 Q140 90 130 65 Z" fill="#0b0c10"/>
+                  <path class="mask-eye-lens" d="M127 69 Q104 75 90 94 Q108 106 124 97 Q135 89 127 69 Z" fill="#ffffff"/>
+                </svg>
+              </div>
+
+              <!-- Floating Comic Action Badges -->
+              <div class="comic-tag tag-top">
+                <span class="tag-icon">⚡</span> WEB SLINGER
+              </div>
+              <div class="comic-tag tag-bottom">
+                <span class="tag-icon">🛡️</span> CLEAN ARCHITECTURE
+              </div>
+            </div>
+
+            <!-- Mini Spec Box -->
+            <div class="hero-card-footer">
+              <div class="footer-spec">
+                <span class="spec-label">BASE OF OPERATIONS</span>
+                <span class="spec-value">New York, NY / Remote</span>
+              </div>
+              <div class="footer-spec">
+                <span class="spec-label">CORE ALLIANCE</span>
+                <span class="spec-value">Full-Stack & Cloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section (#skills) -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        
+        <!-- Section Header with Radial Glow -->
+        <div class="section-header text-center">
+          <div class="section-subtitle-tag">Reflexes & Capabilities</div>
+          <h2 class="section-title">
+            Superpowers & <span class="glow-blue">Tech Stack</span>
+          </h2>
+          <p class="section-intro">
+            From precision DOM manipulation to fault-tolerant distributed servers, here are the weapons and gadgets in my everyday utility belt.
+          </p>
+        </div>
+
+        <!-- Skills Grid of Categories -->
+        <div class="skills-grid">
+          
+          <!-- Category 1: Languages -->
+          <div class="skill-card comic-card">
+            <div class="card-header-line">
+              <div class="category-icon language-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                </svg>
+              </div>
+              <h3 class="category-title">Core Languages</h3>
+            </div>
+            <p class="category-description">
+              The fundamental syntaxes used to instruct machines and sling deterministic logic.
+            </p>
+            <div class="badge-cloud">
+              <div class="skill-pill">
+                <span class="pill-dot red-dot"></span>
+                <span class="pill-name">TypeScript</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot yellow-dot"></span>
+                <span class="pill-name">JavaScript (ES6+)</span>
+                <span class="pill-level">Mastery</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot blue-dot"></span>
+                <span class="pill-name">Python 3</span>
+                <span class="pill-level">Proficient</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot red-dot"></span>
+                <span class="pill-name">HTML5 / Semantic</span>
+                <span class="pill-level">Mastery</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot blue-dot"></span>
+                <span class="pill-name">CSS3 & SASS</span>
+                <span class="pill-level">Mastery</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot yellow-dot"></span>
+                <span class="pill-name">SQL (PostgreSQL)</span>
+                <span class="pill-level">Proficient</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Frameworks & Libraries -->
+          <div class="skill-card comic-card">
+            <div class="card-header-line">
+              <div class="category-icon framework-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h3 class="category-title">Frameworks & Runtime</h3>
+            </div>
+            <p class="category-description">
+              Modular ecosystems powering fluid reactive clients and resilient backends.
+            </p>
+            <div class="badge-cloud">
+              <div class="skill-pill">
+                <span class="pill-dot blue-dot"></span>
+                <span class="pill-name">React.js</span>
+                <span class="pill-level">Mastery</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot red-dot"></span>
+                <span class="pill-name">Next.js (App Router)</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot yellow-dot"></span>
+                <span class="pill-name">Node.js</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot blue-dot"></span>
+                <span class="pill-name">Tailwind CSS</span>
+                <span class="pill-level">Mastery</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot red-dot"></span>
+                <span class="pill-name">Express / Fastify</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot yellow-dot"></span>
+                <span class="pill-name">GraphQL / Apollo</span>
+                <span class="pill-level">Proficient</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Cloud Superpowers -->
+          <div class="skill-card comic-card">
+            <div class="card-header-line">
+              <div class="category-icon tool-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h3 class="category-title">Cloud & Arsenal</h3>
+            </div>
+            <p class="category-description">
+              DevOps, automated pipelines, testing harnesses, and rapid delivery channels.
+            </p>
+            <div class="badge-cloud">
+              <div class="skill-pill">
+                <span class="pill-dot blue-dot"></span>
+                <span class="pill-name">Git & GitHub</span>
+                <span class="pill-level">Mastery</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot red-dot"></span>
+                <span class="pill-name">Docker & Containers</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot yellow-dot"></span>
+                <span class="pill-name">AWS / Cloudflare</span>
+                <span class="pill-level">Proficient</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot blue-dot"></span>
+                <span class="pill-name">Jest / Playwright</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot red-dot"></span>
+                <span class="pill-name">CI/CD Workflows</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot yellow-dot"></span>
+                <span class="pill-name">Vite & Webpack</span>
+                <span class="pill-level">Advanced</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Spider-Sense Banner -->
+        <div class="spider-sense-banner">
+          <div class="sense-icon" aria-hidden="true">🕷️⚡</div>
+          <div class="sense-text">
+            <strong>Spider-Sense Philosophy:</strong> Writing code that is as scalable as a skyscraper, secure as Stark Tower, and intuitive as swinging between avenues.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects Section (#projects) -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-subtitle-tag">Battlefield Deployments</div>
+          <h2 class="section-title">
+            Field Missions & <span class="glow-red">Projects</span>
+          </h2>
+          <p class="section-intro">
+            A curated log of high-impact applications deployed into production, solving real-world challenges with speed, resilience, and style.
+          </p>
+        </div>
+
+        <!-- Responsive Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project Card 1 -->
+          <article class="project-card comic-card">
+            <div class="project-card-header">
+              <div class="mission-tag">MISSION 01 • REAL-TIME</div>
+              <span class="card-status-badge live">ONLINE</span>
+            </div>
+            
+            <div class="project-visual-preview preview-blue">
+              <div class="wireframe-graphic">
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line vertical"></div>
+                <div class="radar-sweep"></div>
+                <div class="tech-icon-center">🕸️</div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Web-Slinger Command Hub</h3>
+              <p class="project-tagline">Real-time collaborative developer telemetry deck</p>
+              
+              <p class="project-desc">
+                A blazingly responsive, event-driven ops dashboard enabling distributed squads to synchronize logs, monitor container health, and trigger deployment webhooks with sub-20ms latency.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tag">TypeScript</span>
+                <span class="tag">React 18</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Redis</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#projects" class="btn btn-sm btn-accent-red">
+                  <span>Live Demo</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card comic-card">
+            <div class="project-card-header">
+              <div class="mission-tag">MISSION 02 • FULL-STACK</div>
+              <span class="card-status-badge live">ONLINE</span>
+            </div>
+            
+            <div class="project-visual-preview preview-red">
+              <div class="wireframe-graphic">
+                <div class="comic-speed-lines"></div>
+                <div class="tech-icon-center">📰</div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Daily Bugle Dispatch CMS</h3>
+              <p class="project-tagline">High-concurrency headless news & media publisher</p>
+              
+              <p class="project-desc">
+                Engineered for rapid breaking-news circulation under massive flash crowds. Features static-generation caching, on-demand ISR, live markdown editing, and automated image pipelines.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tag">Next.js 14</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Prisma ORM</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">AWS S3</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#projects" class="btn btn-sm btn-accent-red">
+                  <span>Live Demo</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card comic-card">
+            <div class="project-card-header">
+              <div class="mission-tag">MISSION 03 • AI / TELEMETRY</div>
+              <span class="card-status-badge live">ONLINE</span>
+            </div>
+            
+            <div class="project-visual-preview preview-yellow">
+              <div class="wireframe-graphic">
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring ring-2"></div>
+                <div class="tech-icon-center">⚡</div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Spider-Sense Threat Telemetry</h3>
+              <p class="project-tagline">Anomaly detection & predictive infrastructure alerting</p>
+              
+              <p class="project-desc">
+                An intelligent telemetry watcher that scans server metric streams for erratic behavior, predicting cascading microservice failures before outages occur, complete with instant Slack alerts.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">React</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Prometheus</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#projects" class="btn btn-sm btn-accent-red">
+                  <span>Live Demo</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article class="project-card comic-card">
+            <div class="project-card-header">
+              <div class="mission-tag">MISSION 04 • 3D / WEBGL</div>
+              <span class="card-status-badge live">ONLINE</span>
+            </div>
+            
+            <div class="project-visual-preview preview-silver">
+              <div class="wireframe-graphic">
+                <div class="cube-wire"></div>
+                <div class="tech-icon-center">🤖</div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Stark Tech Suit Configurator</h3>
+              <p class="project-tagline">Interactive 3D suit module customizer & simulator</p>
+              
+              <p class="project-desc">
+                An experiential 3D product visualizer allowing engineers to inspect modular armor parts, change material shaders in real time, and simulate load distribution with WebGL 60fps performance.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tag">Three.js</span>
+                <span class="tag">WebGL</span>
+                <span class="tag">React</span>
+                <span class="tag">GLSL Shaders</span>
+                <span class="tag">Stripe</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#projects" class="btn btn-sm btn-accent-red">
+                  <span>Live Demo</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Connect / Spider-Signal Section (#connect) -->
+    <section class="connect-section section-padding" id="connect">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-subtitle-tag">Communications & Transmissions</div>
+          <h2 class="section-title">
+            Spider-Signal / <span class="glow-yellow">Let's Connect</span>
+          </h2>
+          <p class="section-intro">
+            Have a project in need of superpowers, a team looking for an inventive engineer, or just want to talk tech and comics? Send a signal.
+          </p>
+        </div>
+
+        <div class="connect-grid">
+          
+          <!-- Coordinates & Socials Card -->
+          <div class="connect-card comic-card">
+            <div class="signal-beacon-header">
+              <div class="beacon-pulse-wrapper">
+                <span class="beacon-circle"></span>
+                <span class="beacon-dot"></span>
+              </div>
+              <div class="beacon-meta">
+                <h3 class="beacon-title">Direct Coordinates</h3>
+                <span class="beacon-status">Frequency: Active & Clear</span>
+              </div>
+            </div>
+
+            <p class="connect-pitch">
+              Whether you're building a groundbreaking startup or elevating enterprise architectures, I'm always eager to collaborate on ambitious web missions.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-row">
+                <span class="detail-icon" aria-hidden="true">📍</span>
+                <div>
+                  <span class="detail-label">Base Location</span>
+                  <span class="detail-value">Queens, NY / Open to Global Remote</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <span class="detail-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <span class="detail-label">Direct Dispatch</span>
+                  <a href="mailto:peter.parker.dev@example.com" class="detail-link">peter.parker.dev@example.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <span class="detail-icon" aria-hidden="true">⏱️</span>
+                <div>
+                  <span class="detail-label">Response Reflex</span>
+                  <span class="detail-value">Within 24 Hours or Less</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Styled Social Channels -->
+            <div class="social-channels-box">
+              <h4 class="channels-title">Network Channels</h4>
+              <div class="social-links-grid">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X / Twitter Profile">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span>X / Twitter</span>
+                </a>
+
+                <a href="mailto:peter.parker.dev@example.com" class="social-btn" aria-label="Send direct email">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  <span>Email Me</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card comic-card">
+            <h3 class="form-title">Launch A Transmission</h3>
+            <p class="form-subtitle">Fill in the coordinates below to beam a direct dispatch to my inbox.</p>
+
+            <form class="spider-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Codename / Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Tony Stark" required autocomplete="name">
+                </div>
+                <span class="field-error" id="nameError">Please enter your name or codename</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Signal Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="email" id="email" name="email" class="form-input" placeholder="tony@starkindustries.com" required autocomplete="email">
+                </div>
+                <span class="field-error" id="emailError">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label for="missionType" class="form-label">Mission Category</label>
+                <div class="input-wrapper select-wrapper">
+                  <select id="missionType" name="missionType" class="form-input form-select">
+                    <option value="new-project">New Web Project / Build</option>
+                    <option value="fulltime-role">Engineering Role / Opportunity</option>
+                    <option value="consulting">Architecture & Tech Consulting</option>
+                    <option value="friendly-chat">Friendly Hello & Networking</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Transmission Brief <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <textarea id="message" name="message" class="form-input form-textarea" rows="4" placeholder="Tell me about your mission, timeline, and architectural targets..." required></textarea>
+                </div>
+                <span class="field-error" id="messageError">Please provide a brief message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block submit-btn" id="submitBtn">
+                <span class="btn-text">Transmit Signal</span>
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                </svg>
+              </button>
+
+              <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <div class="footer-brand">
+        <a href="#about" class="footer-logo">
+          <svg class="spider-logo-icon" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+            <ellipse cx="50" cy="42" rx="7" ry="10" />
+            <ellipse cx="50" cy="62" rx="10" ry="16" />
+            <ellipse cx="50" cy="28" rx="5" ry="5" />
+            <path d="M47 38 Q32 20 18 24 Q30 35 44 42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M53 38 Q68 20 82 24 Q70 35 56 42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M46 44 Q24 35 14 46 Q28 50 44 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M54 44 Q76 35 86 46 Q72 50 56 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M45 56 Q25 58 12 72 Q28 68 44 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M55 56 Q75 58 88 72 Q72 68 56 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M46 64 Q32 78 22 92 Q34 82 46 68" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M54 64 Q68 78 78 92 Q66 82 54 68" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-name">PETER<span class="accent-red">PARKER</span></span>
+        </a>
+        <p class="footer-tagline">Your Friendly Neighborhood Developer • Coding across the multiverse.</p>
+      </div>
+
+      <div class="footer-middle">
+        <p class="footer-credit">
+          Crafted with 🕸️ by <span class="credit-highlight">Peter Parker</span> • Inspired by Spider-Man
+        </p>
+      </div>
+
+      <div class="footer-bottom-links">
+        <a href="#about">About</a>
+        <span class="sep">•</span>
+        <a href="#skills">Skills</a>
+        <span class="sep">•</span>
+        <a href="#projects">Projects</a>
+        <span class="sep">•</span>
+        <a href="#connect">Connect</a>
+      </div>
+
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <a href="#about" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page">
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
